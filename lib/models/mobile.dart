@@ -42,21 +42,21 @@ List<Mobile> mobiles = [
     ],
   ),
   Mobile(
-    name: 'Realme 5i (Green, 64GB)',
-    imageUrl: 'assets/images/Realme-5i-Forest-Green.jpg',
-    rating: 4.4,
-    discount: 16,
-    reviews: '1,36,312',
-    currentPrice: '9,999',
-    originalPrice: '11,999',
-    features: [
-      '4GB RAM | 128 GB Storage',
-      '16.56 cm (6.52 inch) HD+ Display',
-      '5000 mAh',
-      '12MP + 8MP + 2MP + 2MP',
-      '8MP Front Camera',
-    ],
-  ),
+      name: 'Realme 5i (Green, 64GB)',
+      imageUrl: 'assets/images/Realme-5i-Forest-Green.jpg',
+      rating: 4.4,
+      discount: 16,
+      reviews: '1,36,312',
+      currentPrice: '9,999',
+      originalPrice: '11,999',
+      features: [
+        '4GB RAM | 128 GB Storage',
+        '16.56 cm (6.52 inch) HD+ Display',
+        '5000 mAh',
+        '12MP + 8MP + 2MP + 2MP',
+        '8MP Front Camera',
+      ],
+      isLiked: true),
   Mobile(
     name: 'Redmi 5A (Black, 32GB)',
     imageUrl: 'assets/images/Redmi-8-Onyx-Black.jpg',
@@ -88,6 +88,7 @@ List<Mobile> mobiles = [
       '64MP + 8MP + 2MP + 2MP',
       '16MP Front Camera',
     ],
+    isLiked: true,
   ),
   Mobile(
     name: 'Redmi 8 (Black, 64 GB)',
@@ -104,6 +105,7 @@ List<Mobile> mobiles = [
       '12MP + 2MP',
       '8MP Front Camera',
     ],
+    isLiked: true,
   ),
 ];
 

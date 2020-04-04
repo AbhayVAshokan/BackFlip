@@ -9,9 +9,34 @@ class Favorites extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: myAppBar(context: context),
+      appBar: myAppBar(
+        context: context,
+        elevation: 10.0,
+      ),
       body: SafeArea(
-        child: Container(),
+        child: favorites.length == 0
+            ? Center(
+                child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Icon(
+                    Icons.favorite,
+                    color: Color(0xFFD9D9D9),
+                    size: 100.0,
+                  ),
+                  Text(
+                    'No favorites',
+                    style: Theme.of(context).textTheme.headline6.copyWith(
+                          color: Color(0xFFD9D9D9),
+                        ),
+                  ),
+                ],
+              ))
+            : ListView.builder(
+                itemCount: favorites.length,
+                itemBuilder: (context, index) {
+                  return MobileCard(favorites[index]);
+                }),
       ),
       bottomNavigationBar: myBottomNavBar(
         context: context,

@@ -21,7 +21,7 @@ Widget myBottomNavBar({@required context, @required currentIndex}) {
       } else if (index == 0) {
         Navigator.pushReplacementNamed(context, '/homescreen');
       } else if (index == 1) {
-        print('Index 1 was pressed');
+        Navigator.pushReplacementNamed(context, '/favorites');
       } else if (index == 2) {
       } else {
         Navigator.pushReplacementNamed(context, '/profile');
