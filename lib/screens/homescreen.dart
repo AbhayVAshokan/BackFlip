@@ -7,7 +7,6 @@ import '../widgets/homescreen/top_bar.dart';
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    MediaQueryData mediaQuery = MediaQuery.of(context);
 
     return Scaffold(
       appBar: myAppBar(

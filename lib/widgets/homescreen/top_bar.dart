@@ -6,7 +6,6 @@ class TopBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    MediaQueryData mediaQuery = MediaQuery.of(context);
     TextEditingController _searchController = TextEditingController();
 
     return Container(

@@ -3,10 +3,13 @@ import 'package:flutter/material.dart';
 import '../widgets/my_appbar.dart';
 import '../widgets/my_bottom_navbar.dart';
 import '../widgets/homescreen/top_bar.dart';
+import '../models/mobile.dart';
+import '../widgets/searchresults/mobile_card.dart';
 
 class SearchResults extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    print(MediaQuery.of(context).size.width);
     return Scaffold(
       appBar: myAppBar(
         context: context,
@@ -17,7 +20,14 @@ class SearchResults extends StatelessWidget {
           children: <Widget>[
             TopBar(
               isHomeScreen: false,
-            )
+            ),
+            Expanded(
+              child: ListView.builder(
+                  itemCount: mobiles.length,
+                  itemBuilder: (context, index) {
+                    return MobileCard(mobiles[index]);
+                  }),
+            ),
           ],
         ),
       ),

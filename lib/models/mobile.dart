@@ -9,6 +9,7 @@ class Mobile {
   final String originalPrice;
   final int discount;
   final List<String> features;
+  bool isLiked;
 
   Mobile({
     @required this.name,
@@ -19,13 +20,14 @@ class Mobile {
     this.originalPrice,
     this.discount,
     this.features,
+    this.isLiked = false,
   });
 }
 
 List<Mobile> mobiles = [
   Mobile(
-    name: 'Redmi 8 (Ruby Red, 64 GB)',
-    imageUrl: 'lib/assets/images/redmi-8-ruby-red.png',
+    name: 'Redmi 8 (Red, 64 GB)',
+    imageUrl: 'assets/images/redmi-8-ruby-red.png',
     rating: 4.4,
     reviews: '4,59,602',
     currentPrice: '8,199',
@@ -40,8 +42,8 @@ List<Mobile> mobiles = [
     ],
   ),
   Mobile(
-    name: 'Realme 5i (Forest Green, 64GB)',
-    imageUrl: 'lib/assets/images/Realme-5i-Forest-Green.jpg',
+    name: 'Realme 5i (Green, 64GB)',
+    imageUrl: 'assets/images/Realme-5i-Forest-Green.jpg',
     rating: 4.4,
     discount: 16,
     reviews: '1,36,312',
@@ -56,11 +58,11 @@ List<Mobile> mobiles = [
     ],
   ),
   Mobile(
-    name: 'Realme C3 (Frozen Blue, 32GB)',
-    imageUrl: 'lib/assets/images/Realme-C3-Frozen-Blue.jpg',
+    name: 'Redmi 5A (Black, 32GB)',
+    imageUrl: 'assets/images/Redmi-8-Onyx-Black.jpg',
     rating: 4.4,
     discount: 12,
-    reviews: '28,830',
+    reviews: '1,28,830',
     currentPrice: '6,999',
     originalPrice: '7,999',
     features: [
@@ -72,11 +74,11 @@ List<Mobile> mobiles = [
     ],
   ),
   Mobile(
-    name: 'Realme 6 (Comet Blue, 64GB)',
-    imageUrl: 'lib/assets/images/Realme-6-Comet-Blue.jpg',
+    name: 'Realme 6 (Blue, 64GB)',
+    imageUrl: 'assets/images/Realme-6-Comet-Blue.jpg',
     rating: 4.4,
     discount: 13,
-    reviews: '14,051',
+    reviews: '1,14,051',
     currentPrice: '12,999',
     originalPrice: '13,999',
     features: [
@@ -88,8 +90,8 @@ List<Mobile> mobiles = [
     ],
   ),
   Mobile(
-    name: 'Redmi 8 (Onyx Black, 64 GB)',
-    imageUrl: 'lib/assets/images/Redmi-8-Onyx-Black.jpg',
+    name: 'Redmi 8 (Black, 64 GB)',
+    imageUrl: 'assets/images/Redmi-8-Onyx-Black.jpg',
     rating: 4.4,
     discount: 25,
     reviews: '4,59,602',
@@ -104,3 +106,5 @@ List<Mobile> mobiles = [
     ],
   ),
 ];
+
+List<Mobile> favorites = [];
