@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../widgets/my_appbar.dart';
 import '../widgets/my_bottom_navbar.dart';
 
-class Cart extends StatelessWidget {
+class Favorites extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,7 +13,7 @@ class Cart extends StatelessWidget {
       ),
       bottomNavigationBar: myBottomNavBar(
         context: context,
-        currentIndex: 2,
+        currentIndex: 1,
       ),
     );
   }

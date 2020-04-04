@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
-Widget myBottomNavBar({@required context, @required index}) {
+Widget myBottomNavBar({@required context, @required currentIndex}) {
   return CurvedNavigationBar(
     items: [
       Icon(Icons.home),
@@ -13,15 +13,18 @@ Widget myBottomNavBar({@required context, @required index}) {
     backgroundColor: Theme.of(context).backgroundColor,
     buttonBackgroundColor: Theme.of(context).backgroundColor,
     height: 50.0,
-    index: index,
+    index: currentIndex,
     animationDuration: Duration(milliseconds: 200),
     onTap: (index) {
-      if (index == 0) {
+      if (index == currentIndex) {
+        print('doing nothing');
+      } else if (index == 0) {
         Navigator.pushReplacementNamed(context, '/homescreen');
       } else if (index == 1) {
         print('Index 1 was pressed');
       } else if (index == 2) {
-        print('Index 2 was pressed');
+      } else {
+        Navigator.pushReplacementNamed(context, '/profile');
       }
     },
   );
