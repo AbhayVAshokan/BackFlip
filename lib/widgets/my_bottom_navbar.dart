@@ -23,6 +23,7 @@ Widget myBottomNavBar({@required context, @required currentIndex}) {
       } else if (index == 1) {
         Navigator.pushReplacementNamed(context, '/favorites');
       } else if (index == 2) {
+        Navigator.pushReplacementNamed(context, '/cart');
       } else {
         Navigator.pushReplacementNamed(context, '/profile');
       }

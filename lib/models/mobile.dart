@@ -10,6 +10,7 @@ class Mobile {
   final int discount;
   final List<String> features;
   bool isLiked;
+  bool inCart;
 
   Mobile({
     @required this.name,
@@ -21,6 +22,7 @@ class Mobile {
     this.discount,
     this.features,
     this.isLiked = false,
+    this.inCart = false,
   });
 }
 
@@ -110,3 +112,4 @@ List<Mobile> mobiles = [
 ];
 
 List<Mobile> favorites = [];
+List<Mobile> cart = [];

@@ -9,7 +9,7 @@ import '../widgets/searchresults/mobile_card.dart';
 class SearchResults extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    print(MediaQuery.of(context).size.width);
+    print(favorites);
     return Scaffold(
       appBar: myAppBar(
         context: context,

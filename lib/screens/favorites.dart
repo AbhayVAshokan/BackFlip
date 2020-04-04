@@ -8,10 +8,14 @@ import '../models/mobile.dart';
 class Favorites extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    for (var i = 0; i < mobiles.length; i++) {
+      if (mobiles[i].isLiked) favorites.add(mobiles[i]);
+    }
     return Scaffold(
       appBar: myAppBar(
         context: context,
         elevation: 10.0,
+        menuButton: true,
       ),
       body: SafeArea(
         child: favorites.length == 0
