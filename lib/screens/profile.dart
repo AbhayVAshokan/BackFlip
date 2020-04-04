@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../models/mobile.dart';
 import '../widgets/my_appbar.dart';
 import '../widgets/my_bottom_navbar.dart';
 import '../widgets/profile/personal_info.dart';
@@ -7,6 +8,7 @@ import '../widgets/profile/personal_info.dart';
 class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    print(orders);
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       appBar: myAppBar(
@@ -46,10 +48,28 @@ class Profile extends StatelessWidget {
                               children: <Widget>[
                                 Text(
                                   'My Orders',
-                                  style: Theme.of(context).textTheme.subtitle1,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .subtitle1
+                                      .copyWith(
+                                        fontWeight: FontWeight.w600,
+                                      ),
                                 ),
-                                Row(
-                                  children: <Widget>[],
+                                SizedBox(
+                                  height: 20.0,
+                                ),
+                                Container(
+                                  height: 120.0,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.9,
+                                  child: ListView.builder(
+                                      itemCount: orders.length,
+                                      scrollDirection: Axis.horizontal,
+                                      itemBuilder: (context, index) {
+                                        return Image.asset(
+                                          orders[index].imageUrl,
+                                        );
+                                      }),
                                 ),
                               ],
                             ),
@@ -60,15 +80,28 @@ class Profile extends StatelessWidget {
                           elevation: 5.0,
                           child: Padding(
                             padding: EdgeInsets.all(10.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
                                 Text(
-                                  'My Cards and Wallets',
-                                  style: Theme.of(context).textTheme.subtitle1,
+                                  'My Wallet',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .subtitle1
+                                      .copyWith(
+                                        fontWeight: FontWeight.w600,
+                                      ),
                                 ),
-                                Row(
-                                  children: <Widget>[],
+                                Align(
+                                  alignment: Alignment.bottomRight,
+                                  child: Text(
+                                    '₹2000.0',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headline6
+                                        .copyWith(color: Colors.green[300]),
+                                  ),
                                 ),
                               ],
                             ),
@@ -82,10 +115,24 @@ class Profile extends StatelessWidget {
                             children: <Widget>[
                               Text(
                                 'My Reviews',
-                                style: Theme.of(context).textTheme.subtitle1,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .subtitle1
+                                    .copyWith(
+                                      fontWeight: FontWeight.w600,
+                                    ),
                               ),
-                              Row(
-                                children: <Widget>[],
+                              Container(
+                                padding: EdgeInsets.all(5.0),
+                                alignment: Alignment.bottomRight,
+                                child: Text(
+                                  'VIEW MY REVIEWS',
+                                  style: TextStyle(
+                                    fontSize: 15.0,
+                                    color: Color(0xFF0000FF),
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
                               ),
                             ],
                           ),
@@ -98,10 +145,24 @@ class Profile extends StatelessWidget {
                             children: <Widget>[
                               Text(
                                 'My Addresses',
-                                style: Theme.of(context).textTheme.subtitle1,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .subtitle1
+                                    .copyWith(
+                                      fontWeight: FontWeight.w600,
+                                    ),
                               ),
-                              Row(
-                                children: <Widget>[],
+                              Container(
+                                padding: EdgeInsets.all(5.0),
+                                alignment: Alignment.bottomRight,
+                                child: Text(
+                                  'MANAGE ADDRESSES',
+                                  style: TextStyle(
+                                    fontSize: 15.0,
+                                    color: Color(0xFF0000FF),
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
                               ),
                             ],
                           ),

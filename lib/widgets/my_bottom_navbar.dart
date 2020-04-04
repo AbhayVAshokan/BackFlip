@@ -17,7 +17,6 @@ Widget myBottomNavBar({@required context, @required currentIndex}) {
     animationDuration: Duration(milliseconds: 200),
     onTap: (index) {
       if (index == currentIndex) {
-        print('doing nothing');
       } else if (index == 0) {
         Navigator.pushReplacementNamed(context, '/homescreen');
       } else if (index == 1) {

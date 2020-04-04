@@ -108,7 +108,6 @@ class _MobileCardState extends State<MobileCard> {
                                   });
                                   addToFavorites(
                                       widget.mobile, widget.mobile.isLiked);
-                                  print(favorites);
                                 },
                                 child: Container(
                                   decoration: BoxDecoration(
