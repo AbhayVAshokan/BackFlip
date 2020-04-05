@@ -17,10 +17,16 @@ class GridRow extends StatelessWidget {
                 fit: BoxFit.cover,
                 width: MediaQuery.of(context).size.width * 0.45,
               ),
-              Text(gadget1.name),
+              Text(
+                gadget1.name,
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
             ],
           ),
-        ),Card(
+        ),
+        Card(
           child: Column(
             children: <Widget>[
               Image.asset(
@@ -28,7 +34,12 @@ class GridRow extends StatelessWidget {
                 fit: BoxFit.cover,
                 width: MediaQuery.of(context).size.width * 0.45,
               ),
-              Text(gadget2.name),
+              Text(
+                gadget2.name,
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
             ],
           ),
         ),

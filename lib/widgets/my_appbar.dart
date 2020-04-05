@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 Widget myAppBar({@required context, menuButton = false, elevation = 0.0}) {
   return AppBar(
-    brightness: Brightness.light,
+    brightness: Brightness.dark,
     leading: menuButton
         ? IconButton(
             icon: Icon(Icons.menu),

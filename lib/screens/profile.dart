@@ -46,11 +46,12 @@ class Profile extends StatelessWidget {
                             padding: EdgeInsets.all(10.0),
                             child: orders.length == 0
                                 ? GestureDetector(
-                                  onTap: () => Navigator.pushNamed(context, '/searchresults'),
-                                                                  child: Container(
+                                    onTap: () => Navigator.pushNamed(
+                                        context, '/searchresults'),
+                                    child: Container(
                                       height: 120.0,
-                                      width:
-                                          MediaQuery.of(context).size.width * 0.9,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.9,
                                       child: Center(
                                         child: Column(
                                           children: <Widget>[
@@ -68,7 +69,7 @@ class Profile extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                )
+                                  )
                                 : Orders(),
                           ),
                         ),
